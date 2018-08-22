@@ -1,0 +1,23 @@
+{
+  "name": "tcrowe-webextension-https-only",
+  "version": "0.1.0",
+  "description": "toggle https-only mode",
+  "homepage_url": "https://github.com/tcrowe/tcrowe-webextension-https-only",
+  "manifest_version": 2,
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "browser_action": {
+    "browser_style": true,
+    "default_title": "tcrowe-webextension-https-only",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "<all_urls>",
+    "storage",
+    "webRequest",
+    "webRequestBlocking"
+  ]
+}
