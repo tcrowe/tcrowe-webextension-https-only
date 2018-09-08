@@ -14,12 +14,10 @@ let env = process.env.NODE_ENV
 let dev = env === 'development'
 let prd = env === 'production'
 
-let tmpPath = path.join(__dirname, 'dist', 'tmp')
-
-let backgroundPath = path.join(tmpPath, 'background.js')
-let popupPath = path.join(tmpPath, 'popup.js')
-
-let outputPath = path.join(__dirname, 'dist', 'webextension')
+let srcPath = path.join(__dirname, 'src')
+let backgroundPath = path.join(srcPath, 'background.js')
+let popupPath = path.join(srcPath, 'popup.js')
+let distPath = path.join(__dirname, 'dist')
 
 if (env !== 'development') {
   env = 'production'
@@ -34,7 +32,7 @@ let opts = {
     popup: popupPath
   },
   output: {
-    path: outputPath,
+    path: distPath,
     filename: '[name].js'
   },
   watch: false,
