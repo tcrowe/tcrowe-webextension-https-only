@@ -5,7 +5,7 @@ I wanted a very simple and compact way to enforce HTTPS.
 
 Other extensions were very large in size with many dependencies. This one has dependencies to build it but none are included in the extension. It will be very understandable if you read through the source.
 
-## Build it!
+## Develop and build
 
 ```sh
 # download the repo
@@ -19,13 +19,16 @@ npm install
 # includes sourcemaps
 npm run dev
 
-
 # build compact version for production
 # minified without sourcemaps
 npm run prd
 ```
 
-Load `./dist/webextension` into your browser.
+Load `./dist` into your browser.
+
+For the future
+
++ [Pack extension for Chrome](https://www.adambarth.com/experimental/crx/docs/packaging.html). Zip and sign the extension for distribution.
 
 ## Confirmed working for
 
